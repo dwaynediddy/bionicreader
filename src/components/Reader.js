@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import BionicReader from './BionicReader';
+import './reader.css'
 
 const Reader = () => {
   const [inputSentence, setInputSentence] = useState('');
@@ -17,8 +18,10 @@ const Reader = () => {
         value={inputSentence}
         onChange={handleInputChange}
         placeholder="Enter your content"
+        className='input-container'
       />
       <button
+      className='bionic-button'
         onClick={() => {
           // Pass inputSentence and setModifiedSentence to BionicReader
           BionicReader({ inputSentence, setModifiedSentence });
@@ -27,7 +30,7 @@ const Reader = () => {
         Bionic Reader
       </button>
       {modifiedSentence && (
-        <div>
+        <div className='output-container'>
           <p dangerouslySetInnerHTML={{ __html: modifiedSentence }} />
         </div>
       )}

@@ -1,0 +1,29 @@
+ .reader-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+ .input-container {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .bionic-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+  }
+  
+ .output-container {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f5f5f5;
+    font-size: 16px;
+  }

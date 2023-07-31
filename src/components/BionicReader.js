@@ -1,5 +1,3 @@
-import React from 'react';
-
 const BionicReader = ({ inputSentence, setModifiedSentence }) => {
   let words = inputSentence.split(' ');
   let modifiedWords = [];
@@ -25,12 +23,7 @@ const BionicReader = ({ inputSentence, setModifiedSentence }) => {
   const modified = modifiedWords.join(' ');
   setModifiedSentence(modified);
 
-  return (
-    <div>
-      {/* Display the modified sentence here if needed */}
-      {/* <p dangerouslySetInnerHTML={{ __html: modified }} /> */}
-    </div>
-  )
+  return
 }
 
-export default BionicReader;
+export default BionicReader
