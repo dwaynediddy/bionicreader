@@ -4,11 +4,20 @@ import './reader.css'
 
 const Reader = () => {
   const [inputSentence, setInputSentence] = useState('');
-  const [modifiedSentence, setModifiedSentence] = useState('');
+  const [modifiedSentence, setModifiedSentence] = useState('')
+  const [fontSize, setFontSize] = useState(16)
 
   const handleInputChange = (event) => {
     setInputSentence(event.target.value);
   };
+
+  const increaseFontSize = () => {
+    setFontSize((previousFontSize) => previousFontSize + 2)
+  }
+
+  const decreaseFontSize = () => {
+    setFontSize((previousFontSize) => Math.max(previousFontSize - 2, 10))
+  }
 
   return (
     <div className="reader-container">
@@ -31,9 +40,15 @@ const Reader = () => {
       </button>
       {modifiedSentence && (
         <div className='output-container'>
-          <p dangerouslySetInnerHTML={{ __html: modifiedSentence }} />
+          <p
+            style={{ fontSize: `${fontSize}px` }}
+            dangerouslySetInnerHTML={{ __html: modifiedSentence }} 
+          />
         </div>
       )}
+      <h4>Adjuct font size</h4>
+      <button onClick={increaseFontSize}>+</button>
+      <button onClick={decreaseFontSize}>-</button>
     </div>
   );
 };
