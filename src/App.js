@@ -1,4 +1,5 @@
 import './App.css';
+import OpenLibrary from './components/OpenLibrary'
 import Reader from './components/Reader'
 
 function App() {
@@ -8,7 +9,8 @@ function App() {
   return (
     <div className="App">
       <h1>Bionic Reader App</h1>
-      <Reader sentence={originalSentence} />
+      {/* <Reader sentence={originalSentence} /> */}
+      <OpenLibrary />
     </div>
   );
 }
